@@ -81,7 +81,7 @@ def login() :
     login_username = input("Pleaase enter your username : " ).strip()  
     login_password = input ("Please input your password : ").strip()
 
-    tries = 4 
+    tries = 4
     while(tries and (login_username not in bank_DB or  bank_DB[login_username]["password"] != login_password)) :
         
         if(tries ==1):
@@ -147,7 +147,7 @@ def change_username (user_name) :
             return new_username 
             
         
-    if(not tries):
+    if(new_username == "" or new_username in bank_DB):
          print("Changing username Failed")
          return
 
